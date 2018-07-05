@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Salome';
+  src: url("../fonts/Salome/salome-webfont.eot");
+  src: url("../fonts/Salome/salome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Salome/salome-webfont.woff") format("woff"), url("../fonts/Salome/salome-webfont.ttf") format("truetype"), url("../fonts/Salome/salome-webfont.svg#Salome") format("svg");
+  font-style: normal;
+  font-weight: normal; }
+
 .main {
   --color-text: #fff;
   --color-bg: #0F1617;
