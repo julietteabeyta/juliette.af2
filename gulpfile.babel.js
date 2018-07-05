@@ -3,10 +3,6 @@ import sass from "gulp-sass";
 
 const scssPaths = ["./scss/*.scss", "./scss/**/*.scss"];
 
-gulp.task("default", () =>{
-	console.log('SOME SHIIIITTTTTTTT');
-});
-
 gulp.task("sass", () => {
 	gulp.src(scssPaths)
 		.pipe(sass())
