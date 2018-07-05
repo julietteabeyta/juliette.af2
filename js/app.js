@@ -15,7 +15,7 @@ var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 4000);
 camera.position.set(0, 0, 100);
 
-var geometry = new THREE.SphereGeometry(20, 4, 30);
+var geometry = new THREE.SphereGeometry(20, 4, 20);
 var geometry = new THREE.BoxGeometry(100, 100, 100, 7, 7, 7);
 for(var i=0;i<geometry.faces.length;i++){
     var face = geometry.faces[i];
@@ -69,7 +69,7 @@ function render(a) {
         var ratio = noise.simplex3((vector._o.x*0.01), (vector._o.y*0.01)+(a*0.001), (vector._o.z*0.11));
         vector.copy(vector._o);
         vector.multiplyScalar(1 + (ratio*0.1));
-        vector.multiplyScalar(1);
+        vector.multiplyScalar(3);
     }
     geometry.verticesNeedUpdate = true;
     renderer.render(scene, camera);

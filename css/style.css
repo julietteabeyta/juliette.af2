@@ -14,8 +14,7 @@
   font-family: 'Salome', serif;
   color: var(--color-title);
   text-align: center;
-  margin: 0;
-  pointer-events: none; }
+  margin: 0; }
 
 .content__subtitle {
   font-size: 1em;
@@ -31,7 +30,7 @@
 
 @media screen and (max-width: 55em) {
   .content__title {
-    font-size: 3.5em; }
+    font-size: 16vw; }
   .content__subtitle {
     font-size: 0.85em; } }
 
@@ -212,35 +211,43 @@ a:focus {
   align-items: center;
   align-content: center;
   margin: 0 auto;
-  min-height: 100vh; }
+  min-height: 100vh;
+  min-width: 100vw; }
 
 .content--fixed {
   position: fixed;
   z-index: 10000;
   top: 0;
   left: 0;
-  display: grid;
-  align-content: space-between;
   width: 100%;
   max-width: none;
   min-height: 0;
-  height: 100vh;
-  padding: 1.5em;
-  grid-template-columns: 50% 50%;
-  pointer-events: none;
-  grid-template-rows: auto auto 4em; }
+  height: 100vh; }
 
 .nav-link:hover,
 .nav-link:focus {
   opacity: 0.5; }
 
-.nav-link span {
-  white-space: nowrap;
-  text-transform: lowercase;
-  pointer-events: none; }
+.nav {
+  display: grid;
+  grid-row: span 1 / -1;
+  justify-self: end;
+  grid-column: span 1 / -1;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 110%;
+  max-width: 400px;
+  margin-top: 5px;
+  justify-items: center; }
+
+.nav-link {
+  display: block;
+  width: 17px;
+  height: 17px;
+  margin: 0 4px; }
 
 .contact {
   background-repeat: no-repeat;
+  height: 17px;
   width: 17px;
   margin: 0 4px;
   z-index: 100; }
@@ -248,6 +255,8 @@ a:focus {
     background-image: url(../images/atSymbol.svg); }
   .contact.twitter-link {
     background-image: url(../images/twitter.svg); }
+  .contact.linkedin-link {
+    background-image: url(../images/linkedIn.svg); }
   .contact.github-link {
     background-image: url(../images/github.svg); }
   .contact.codepen-link {
@@ -290,25 +299,7 @@ a:focus {
     display: block;
     width: 54px;
     height: 46px;
-    fill: var(--color-link); }
-  .nav {
-    display: flex;
-    grid-row: span 1 / -1;
-    justify-self: end;
-    grid-column: span 1 / -1; }
-  .nav-link {
-    display: block;
-    width: 17px;
-    height: 17px;
-    margin: 0 4px;
-    border-radius: 50%;
-    background: var(--color-link); }
-  .nav-link span {
-    line-height: 1;
-    position: absolute;
-    right: 100%;
-    display: none;
-    margin: 0 1em 0 0; } }
+    fill: var(--color-link); } }
 
 @media screen and (max-width: 55em) {
   .content {
@@ -317,7 +308,4 @@ a:focus {
   .content--fixed {
     position: relative;
     z-index: 1000;
-    display: block;
-    padding: 0.85em; }
-  .content:not(.content--fixed) {
-    margin-bottom: 6em; } }
+    display: block; } }
